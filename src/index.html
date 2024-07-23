@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Generador Carta Aleatoria</title>
+    <script defer src="app.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -11,18 +16,60 @@
       crossorigin="anonymous"
     />
     <link rel="shortcut icon" href="./4geeks.ico" />
+    <style>
+      .red {
+        color: red;
+      }
+    </style>
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+
+  <body style="background-color: green;">
+    <div class="container">
+      <div class="d-flex justify-content-center" style="margin-top: 10px;">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+      </div>
+      <div
+        id="countdown"
+        class="d-flex justify-content-center mt-2"
+        style="margin-left:auto; margin-right: auto;"
+      >
+        10
+      </div>
+      <button
+        type="button"
+        class="btn btn-dark d-flex justify-content-center col-lg-5"
+        style="width: 10rem; margin-left: auto; margin-right: auto; margin-top: 20px;"
+        id="reloadButton"
+      >
+        Generar Carta
+      </button>
+      <div
+        class="card d-flex justify-content-center col-lg-10 shadow p-3 mb-5 bg-body"
+        style="width: 20rem; height: 30rem; margin-left: auto; margin-right: auto; margin-top: 30px; border-radius: 20px;"
+      >
+        <div class="card-body">
+          <h1
+            class="card-title d-flex justify-content-start"
+            id="Palos2"
+            style="font-size: 60px;"
+          ></h1>
+        </div>
+        <div>
+          <h1
+            class="d-flex justify-content-center"
+            style="margin-top: -13rem; font-size: 90px; font-family: 'Bodoni';"
+            id="numeros"
+          ></h1>
+        </div>
+        <div>
+          <h1
+            class="card-text d-flex justify-content-start"
+            style="margin-right: 15px; font-size: 60px; transform: rotate(-180deg);"
+            id="Palos1"
+          ></h1>
+        </div>
       </div>
     </div>
   </body>
